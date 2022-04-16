@@ -1,6 +1,12 @@
 {
+    "ace": {
+        "@tabSize": 2
+    },
     "extensions": {
         "@json.schemas": []
+    },
+    "instance": {
+        "@automaticShutdown": "30"
     },
     "language": {
         "tern_defs": {
