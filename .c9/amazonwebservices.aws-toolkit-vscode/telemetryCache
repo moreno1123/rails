@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-[{"MetricName":"session_end","Value":1772431,"EpochTimestamp":1650096946839,"Unit":"None","Passive":true,"Metadata":[{"Key":"awsAccount","Value":"n/a"},{"Key":"computeRegion","Value":"us-east-1"}]}]
-=======
-[{"MetricName":"session_end","Value":881743,"EpochTimestamp":1650095139459,"Unit":"None","Passive":true,"Metadata":[{"Key":"awsAccount","Value":"n/a"},{"Key":"computeRegion","Value":"us-east-1"}]}]
->>>>>>> user
+[{"MetricName":"session_end","Value":23162255,"EpochTimestamp":1650120117985,"Unit":"None","Passive":true,"Metadata":[{"Key":"awsAccount","Value":"n/a"},{"Key":"computeRegion","Value":"us-east-1"}]}]
