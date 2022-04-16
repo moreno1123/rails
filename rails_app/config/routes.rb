@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get 'pages/contact'
   get 'pages/about'
   
-  devise_for :users
+  devise_for :users,  :controllers => { registrations: 'registrations' }
 end
