@@ -1,9 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @article %>
-    
-    <%= render 'comments/form'%>
-
+<%= render @article.comments %><br>
+<%= render 'comments/form' %><br>
 <div>
   <%= link_to "Edit this article", edit_article_path(@article) %> |
   <%= link_to "All articles", articles_path %> |
