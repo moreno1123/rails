@@ -3,30 +3,53 @@ require './lib/classes/calculator.rb'
 
 RSpec.describe Calculator, type: :class do
     
-    let(:list_of_numbers) {Calculator.new([1,2])}
-    let(:list_of_numbers1) {Calculator.new([])}
-    
-    context "given string" do
+    context "when empty list of numbers is provided" do
+        subject { Calculator.new(list_of_numbers) }
         
-        it "wrong input" do
-            expect(Calculator.hello()).not_to eq("book")
+        let(:list_of_numbers) { [] }
+
+        it "raises an error" do
+            expect{subject}.to raise_error(RuntimeError)
         end
-        
-        it "correct input" do
-            expect(Calculator.hello()).to eq("Hello, I am your Calculator :) ")
-        end
-        
     end
     
-    context "given array" do
-        
-        it "list of numbers" do
-           expect (list_of_numbers) != eq(nil)
+    describe "#sum" do
+        subject { Calculator.new(list_of_numbers).sum }
+
+        let(:list_of_numbers) { [1,2] }
+
+        it "return sum of numbers" do
+            expect(subject).to eq(3)
         end
-        
-        it "empty list of numbers" do
-           expect {list_of_numbers1}.to raise_error(RuntimeError)
+    end
+
+    describe "#max" do
+        subject { Calculator.new(list_of_numbers).max }
+
+        let(:list_of_numbers) { [1,2,6,8] }
+
+        it "return the highest number from the list" do
+            expect(subject).to eq(8)
         end
-        
+    end
+
+    describe "#min" do
+        subject { Calculator.new(list_of_numbers).min }
+
+        let(:list_of_numbers) { [1,2,6,8] }
+
+        it "return the lowest number from the list" do
+            expect(subject).to eq(1)
+        end
+    end
+
+    describe "#odd" do
+        subject { Calculator.new(list_of_numbers).sum % 2 != 0 ? true : false}
+
+        let(:list_of_numbers) { [1,2] }
+
+        it "return true if the sum of numbers is odd" do
+            expect(subject).to eq(true)
+        end
     end
 end
