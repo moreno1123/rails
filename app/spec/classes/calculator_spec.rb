@@ -59,5 +59,9 @@ RSpec.describe Calculator, type: :class do
         it "return true if the string is correct" do
             expect(subject).to eq("Hello, I am your Calculator :) ")
         end
+
+        it "return true if the string is not correct" do
+            expect(subject) != eq("Hello")
+        end
     end
 end
