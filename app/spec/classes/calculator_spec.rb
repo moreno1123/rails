@@ -44,12 +44,20 @@ RSpec.describe Calculator, type: :class do
     end
 
     describe "#odd" do
-        subject { Calculator.new(list_of_numbers).sum % 2 != 0 ? true : false}
+        subject { Calculator.new(list_of_numbers).odd}
 
         let(:list_of_numbers) { [1,2] }
 
         it "return true if the sum of numbers is odd" do
             expect(subject).to eq(true)
+        end
+    end
+
+    describe "#self.hello" do
+        subject { Calculator.hello() }
+
+        it "return true if the string is correct" do
+            expect(subject).to eq("Hello, I am your Calculator :) ")
         end
     end
 end
